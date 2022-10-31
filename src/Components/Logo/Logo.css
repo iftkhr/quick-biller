@@ -12,3 +12,14 @@
 .tagline {
 	font-size: 3em;
 }
+
+.logo-small {
+	font-size: 3em;
+	justify-self: left;
+}
+
+@media all and (max-width: 500px) {
+	.logo-small {
+		font-size: 2em;
+	}
+}

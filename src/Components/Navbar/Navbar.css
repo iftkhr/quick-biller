@@ -1,0 +1,30 @@
+.navbar-container {
+	display: grid;
+	justify-content: end;
+	align-content: center;
+	width: 100%;
+}
+
+.navbar-links {
+	font-size: 2em;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-items: start;
+	gap: 20px;
+	cursor: pointer;
+}
+
+.navbar-links div:hover {
+	font-weight: 600;
+}
+
+.active {
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+@media all and (max-width: 500px) {
+	.navbar-links {
+		font-size: 1.5em;
+	}
+}

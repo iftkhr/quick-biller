@@ -7,7 +7,7 @@ export const LoginBox = () => {
 			<form action="dashboard" method="" id="loginbox-form">
 				<div className="form-email">
 					<label for="email">E-mail:</label>
-					<input type="text" id="email" value="adithya@gmail.com" />
+					<input type="text" id="email" value="email@domain.com" />
 				</div>
 				<div className="form-password">
 					<label for="password">Password:</label>
