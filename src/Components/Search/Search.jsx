@@ -8,6 +8,7 @@ export const Search = () => {
 			type: "search",
 			payload: { query: document.getElementById("search").value },
 		});
+		document.getElementById("filter-name").innerHTML = "All";
 	};
 	return (
 		<div className="search-container">
