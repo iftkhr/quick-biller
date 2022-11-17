@@ -1,0 +1,63 @@
+.filterdropdown-container {
+	width: 250px;
+}
+
+.filter-selected {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+#filter-name {
+	border-radius: 10px 0 0 10px;
+	background: rgb(255, 255, 255);
+	width: 220px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.filter-button {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	border: none;
+	border-radius: 0 10px 10px 0;
+	padding: 5px;
+	background: #ddd;
+	width: 30px;
+	justify-self: end;
+	cursor: pointer;
+}
+
+.arrow-icon {
+	width: 20px;
+	opacity: 0.7;
+}
+
+.filter-dropdown {
+	border-radius: 0 0 10px 10px;
+	background: rgb(255, 255, 255);
+	width: 220px;
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.dropdown-item {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.dropdown-item:hover {
+	background: #ddd;
+}
+
+.dropdown-item:last-child {
+	border-radius: 0 0 10px 10px;
+}
+
+.hide {
+	display: none;
+}
+
+.corner {
+	border-radius: 10px 0 0 0 !important;
+}
