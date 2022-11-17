@@ -5,8 +5,7 @@ import "./Dashboard.css";
 import { useSelector } from "react-redux";
 
 export const Dashboard = () => {
-	const bills = useSelector((state) => state.bills.bills);
-	console.log(bills);
+	const bills = useSelector((state) => state.bills);
 	const monthlyBill = new Map();
 	bills.forEach((bill) => {
 		let billMonth = new Date(bill.date).getMonth();
