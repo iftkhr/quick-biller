@@ -24,7 +24,6 @@ export const BillBox = ({ data }) => {
 			<div className="billbox-description">{data.description}</div>
 			<div className="billbox-date">{data.date}</div>
 			<hr />
-
 			<div className="billbox-amount">₹{data.amount}</div>
 		</div>
 	);

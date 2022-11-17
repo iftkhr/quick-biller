@@ -1,0 +1,83 @@
+.addbill-container {
+	background: #fff;
+	display: grid;
+	justify-items: center;
+	padding: 40px;
+	gap: 20px;
+	border-radius: 10px;
+	box-shadow: 4px 6px 0px 4px rgb(75, 192, 192);
+}
+
+.addbilldropdown-container {
+	width: 100%;
+	font-size: 1.2em;
+}
+
+.addbill-selected {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+#addbill-name {
+	border-radius: 10px 0 0 10px;
+	background: rgb(255, 255, 255);
+	width: 220px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.addbilldropdown-button {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	border: none;
+	border-radius: 0 10px 10px 0;
+	padding: 5px;
+	background: rgb(75, 192, 192);
+	width: 30px;
+	justify-self: end;
+	cursor: pointer;
+}
+
+.addbill-dropdown {
+	border-radius: 0 0 10px 10px;
+	background: rgb(255, 255, 255);
+	width: 220px;
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.hide {
+	display: none;
+}
+
+.corner {
+	border-radius: 10px 0 0 0 !important;
+}
+
+.addbill-container input {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid rgb(75, 192, 192);
+	height: 30px;
+	font-size: 1.2em;
+	font-family: "Quicksand", sans-serif;
+}
+
+.addbill-container input:focus {
+	outline: none;
+}
+
+.addbill-button {
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	background: rgb(75, 192, 192);
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.addbill-button:hover {
+	background: rgb(75, 192, 192, 0.8);
+}

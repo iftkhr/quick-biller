@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { AddBill } from "../AddBill/AddBill";
 import { BillBox } from "../BillBox/BillBox";
 import "./BillsBox.css";
 
@@ -10,6 +11,7 @@ export const BillsBox = () => {
 			{bills.map((bill) => {
 				return <BillBox data={bill} />;
 			})}
+			<AddBill />
 		</div>
 	);
 };
