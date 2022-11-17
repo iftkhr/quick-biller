@@ -2,10 +2,12 @@
 	background: #fff;
 	display: grid;
 	justify-items: center;
-	padding: 40px 20px;
+	align-content: center;
+	padding: 40px;
 	gap: 20px;
 	border-radius: 10px;
 	box-shadow: 4px 6px 0px 4px rgb(75, 192, 192);
+	height: 300px;
 }
 
 .billbox-category {

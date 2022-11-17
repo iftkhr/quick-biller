@@ -56,7 +56,7 @@ export const billReducer = (state = initialState, action) => {
 			return [
 				...state,
 				{
-					id: action.payload.id,
+					id: state.length + 1,
 					description: action.payload.description,
 					category: action.payload.category,
 					amount: action.payload.amount,

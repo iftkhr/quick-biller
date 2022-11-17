@@ -6,6 +6,7 @@
 	gap: 20px;
 	border-radius: 10px;
 	box-shadow: 4px 6px 0px 4px rgb(75, 192, 192);
+	height: 300px;
 }
 
 .addbilldropdown-container {
@@ -21,7 +22,6 @@
 #addbill-name {
 	border-radius: 10px 0 0 10px;
 	background: rgb(255, 255, 255);
-	width: 220px;
 	padding: 5px 10px;
 	box-sizing: border-box;
 }
@@ -42,7 +42,6 @@
 .addbill-dropdown {
 	border-radius: 0 0 10px 10px;
 	background: rgb(255, 255, 255);
-	width: 220px;
 	box-sizing: border-box;
 	position: absolute;
 }

@@ -1,6 +1,31 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./AddBill.css";
 
 export const AddBill = () => {
+	const bills = useSelector((state) => state.bills);
+	console.log(bills);
+	const addBill = useDispatch();
+	const addFunction = () => {
+		let description = document.getElementById("addbill-description").value;
+		let category = document.getElementById("addbill-name").innerHTML;
+		let amount = document.getElementById("addbill-amount").value;
+		let date = document.getElementById("addbill-date").value;
+
+		if (description === "" || amount === "" || date === "") {
+			alert("Please fill all the fields!");
+		} else {
+			addBill({
+				type: "bills/billAdded",
+				payload: {
+					description: description,
+					category: category,
+					amount: amount,
+					date: date,
+				},
+			});
+			console.log(bills);
+		}
+	};
 	const dropdownFunction = () => {
 		document.getElementById("addbill-name").classList.toggle("corner");
 		document.getElementById("addbill-dropdown").classList.toggle("hide");
@@ -64,17 +89,21 @@ export const AddBill = () => {
 				</div>
 			</div>
 			<input
+				id="addbill-description"
 				className="addbill-description"
 				type="text"
 				placeholder="Description"
 			/>
-			<input className="addbill-date" type="date" />
+			<input id="addbill-date" className="addbill-date" type="date" />
 			<input
+				id="addbill-amount"
 				className="addbill-amount"
 				type="text"
 				placeholder="Amount"
 			/>
-			<button className="addbill-button">Add Bill</button>
+			<button className="addbill-button" onClick={addFunction}>
+				Add Bill
+			</button>
 		</div>
 	);
 };
