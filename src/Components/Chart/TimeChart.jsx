@@ -24,7 +24,6 @@ ChartJS.register(
 );
 
 export const TimeChart = ({ billAmount }) => {
-	console.log(billAmount);
 	ChartJS.defaults.font.family = "Quicksand";
 	ChartJS.defaults.font.size = 14;
 	const options = {
