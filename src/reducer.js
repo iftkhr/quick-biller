@@ -65,7 +65,7 @@ export const billReducer = (state = initialState, action) => {
 			];
 
 		case "bills/billRemoved":
-			return state.bills.filter((bill) => bill.id !== action.payload.id);
+			return state.filter((bill) => bill.id !== action.payload.id);
 		case "filter":
 			if (action.payload.category === "All") {
 				return initialState;

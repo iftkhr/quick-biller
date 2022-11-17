@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import "./AddBill.css";
 
 export const AddBill = () => {
-	const bills = useSelector((state) => state.bills);
-	console.log(bills);
 	const addBill = useDispatch();
 	const addFunction = () => {
 		let description = document.getElementById("addbill-description").value;
@@ -23,7 +21,6 @@ export const AddBill = () => {
 					date: date,
 				},
 			});
-			console.log(bills);
 		}
 	};
 	const dropdownFunction = () => {
@@ -102,7 +99,7 @@ export const AddBill = () => {
 				placeholder="Amount"
 			/>
 			<button className="addbill-button" onClick={addFunction}>
-				Add Bill
+				<img src="./add-icon.svg" alt="" className="button-image" />
 			</button>
 		</div>
 	);
