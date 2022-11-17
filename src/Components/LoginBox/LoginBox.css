@@ -27,7 +27,7 @@
 	gap: 10px;
 }
 
-input {
+.login-field {
 	font-size: 1em;
 	font-family: "Quicksand", sans-serif;
 	border-radius: 5px;
@@ -36,7 +36,7 @@ input {
 	padding: 10px;
 }
 
-input:focus {
+.login-field:focus {
 	background: rgb(255, 255, 0, 0.6);
 }
 
