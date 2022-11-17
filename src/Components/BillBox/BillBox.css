@@ -1,0 +1,41 @@
+.billbox-container {
+	background: #fff;
+	display: grid;
+	justify-items: center;
+	padding: 40px 20px;
+	gap: 20px;
+	border-radius: 10px;
+	box-shadow: 4px 6px 0px 4px rgb(75, 192, 192);
+}
+
+.billbox-category {
+	display: grid;
+	gap: 20px;
+	justify-items: center;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+hr {
+	width: 100%;
+}
+
+.billbox-icon {
+	height: 50px;
+}
+
+.billbox-description {
+	font-size: 1.4em;
+	font-weight: 500;
+}
+
+.billbox-date {
+	font-size: 1.4em;
+	font-weight: 500;
+}
+
+.billbox-amount {
+	font-size: 2em;
+	font-weight: 600;
+	color: rgb(75, 192, 192);
+}

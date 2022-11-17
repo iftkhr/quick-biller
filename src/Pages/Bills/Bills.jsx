@@ -3,7 +3,7 @@ import "./Bills.css";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { Logo } from "../../Components/Logo/Logo";
 import { Filters } from "../../Components/Filters/Filters";
-import { BillsBox } from "../../Components/Bills/BillsBox";
+import { BillsBox } from "../../Components/BillsBox/BillsBox";
 
 export const Bills = () => {
 	return (
