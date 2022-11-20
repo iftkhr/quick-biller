@@ -2,17 +2,39 @@ import { TimeChart } from "../../Components/Chart/TimeChart";
 import { Logo } from "../../Components/Logo/Logo";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import "./Dashboard.css";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Dashboard = () => {
-	const bills = useSelector((state) => state.bills);
+	const [getBills, setBills] = useState();
+
+	useEffect(() => {
+		axios
+			.get("/api/bills")
+			.then((response) => {
+				setBills(response.data);
+			})
+			.catch((error) => console.log(error));
+	}, []);
+
+	if (getBills === undefined) {
+		return (
+			<div className="loader-container">
+				<div className="loader"></div>
+			</div>
+		);
+	}
+
+	console.log(getBills.bills);
+
 	const monthlyBill = new Map();
-	bills.forEach((bill) => {
+	getBills.bills.forEach((bill) => {
 		let billMonth = new Date(bill.date).getMonth();
 		console.log(billMonth);
 		let billAmount = monthlyBill.has(billMonth)
-			? parseInt(monthlyBill.get(billMonth)) + parseInt(bill.amount)
-			: parseInt(bill.amount);
+			? parseFloat(monthlyBill.get(billMonth).toString()) +
+			  parseFloat(bill.amount["$numberDecimal"].toString())
+			: parseFloat(bill.amount["$numberDecimal"].toString());
 		monthlyBill.set(billMonth, billAmount);
 	});
 
