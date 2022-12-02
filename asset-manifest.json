@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/quick-biller/static/css/main.e6cedb99.css",
-    "main.js": "/quick-biller/static/js/main.4296c563.js",
+    "main.css": "/quick-biller/static/css/main.97a8ad83.css",
+    "main.js": "/quick-biller/static/js/main.1f8550f4.js",
     "index.html": "/quick-biller/index.html",
-    "main.e6cedb99.css.map": "/quick-biller/static/css/main.e6cedb99.css.map",
-    "main.4296c563.js.map": "/quick-biller/static/js/main.4296c563.js.map"
+    "main.97a8ad83.css.map": "/quick-biller/static/css/main.97a8ad83.css.map",
+    "main.1f8550f4.js.map": "/quick-biller/static/js/main.1f8550f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6cedb99.css",
-    "static/js/main.4296c563.js"
+    "static/css/main.97a8ad83.css",
+    "static/js/main.1f8550f4.js"
   ]
 }
