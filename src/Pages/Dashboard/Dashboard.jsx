@@ -3,19 +3,10 @@ import { Logo } from "../../Components/Logo/Logo";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import "./Dashboard.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { useSelector } from "react-redux";
 
 export const Dashboard = () => {
-	const [getBills, setBills] = useState();
-
-	useEffect(() => {
-		axios
-			.get("/api/bills")
-			.then((response) => {
-				setBills(response.data);
-			})
-			.catch((error) => console.log(error));
-	}, []);
+	const [getBills, setBills] = useState(useSelector((state) => state.bills));
 
 	if (getBills === undefined) {
 		return (
@@ -25,16 +16,14 @@ export const Dashboard = () => {
 		);
 	}
 
-	console.log(getBills.bills);
-
 	const monthlyBill = new Map();
-	getBills.bills.forEach((bill) => {
+	console.log(getBills);
+	getBills.forEach((bill) => {
 		let billMonth = new Date(bill.date).getMonth();
-		console.log(billMonth);
 		let billAmount = monthlyBill.has(billMonth)
 			? parseFloat(monthlyBill.get(billMonth).toString()) +
-			  parseFloat(bill.amount["$numberDecimal"].toString())
-			: parseFloat(bill.amount["$numberDecimal"].toString());
+			  parseFloat(bill.amount.toString())
+			: parseFloat(bill.amount.toString());
 		monthlyBill.set(billMonth, billAmount);
 	});
 

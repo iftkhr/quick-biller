@@ -2,12 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import "./BillBox.css";
 
 const icons = {
-	Education: "./education-icon.svg",
-	"Food and Dining": "./food-icon.svg",
-	"Personal Care": "./care-icon.svg",
-	Shopping: "./shopping-icon.svg",
-	Travel: "./travel-icon.svg",
-	Utility: "./utility-icon.svg",
+	Education: "/education-icon.svg",
+	"Food and Dining": "/food-icon.svg",
+	"Personal Care": "/care-icon.svg",
+	Shopping: "/shopping-icon.svg",
+	Travel: "/travel-icon.svg",
+	Utility: "/utility-icon.svg",
 };
 
 export const BillBox = ({ data }) => {
@@ -44,16 +44,12 @@ export const BillBox = ({ data }) => {
 					className="billbox-button"
 					id={"billbox-edit" + data.id}
 				>
-					<img
-						className="button-image"
-						src="./edit-icon.svg"
-						alt=""
-					/>
+					<img className="button-image" src="/edit-icon.svg" alt="" />
 				</button>
 				<button className="billbox-button">
 					<img
 						className="button-image"
-						src="./delete-icon.svg"
+						src="/delete-icon.svg"
 						alt=""
 						id={"billbox-delete" + data.id}
 						onClick={deleteFunction}
